@@ -1,16 +1,12 @@
 # yippy
 
-A new Flutter project.
+A new Flutter project. State Management using Provider
 
-## Getting Started
+## HomePage
+![Screenshot_20240131_013623](https://github.com/Rizqanmr/yippy/assets/45690865/c9de4426-52dd-4d3a-9043-2e3704299b70)
 
-This project is a starting point for a Flutter application.
+## Token Listrik Page
+![Screenshot_20240131_013632](https://github.com/Rizqanmr/yippy/assets/45690865/2cec27c8-dbcc-4681-8180-2fff468b8b18)
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Detail Transaction
+![Screenshot_20240131_013638](https://github.com/Rizqanmr/yippy/assets/45690865/6c8f511b-d371-4207-b8ad-52f386183eaa)
