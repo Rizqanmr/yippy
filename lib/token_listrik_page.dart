@@ -78,12 +78,12 @@ class _TokenListrikState extends State<TokenListrikPage> {
                           return const SizedBox.shrink();
                         }
                         return GestureDetector(
-                            onTap: () => vm.selectItem(index),
+                            onTap: () => vm.selectPriceList(index),
                             child: Container(
                               decoration: BoxDecoration(
-                                color: vm.selectedItems.value == index ? Colors.blue.withOpacity(0.1) : Colors.transparent,
+                                color: vm.selectedPriceList?.index == index ? Colors.blue.withOpacity(0.1) : Colors.transparent,
                                 border: Border.all(
-                                  color: vm.selectedItems.value == index ? Colors.blue : Colors.grey,
+                                  color: vm.selectedPriceList?.index == index ? Colors.blue : Colors.grey,
                                   width: 2.0,
                                 ),
                                 borderRadius: BorderRadius.circular(8.0),

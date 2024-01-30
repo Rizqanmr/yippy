@@ -7,7 +7,7 @@ class TheraVm with ChangeNotifier {
   bool _isLoading = true;
   Thera? _thera;
   final TheraRepository _repository = TheraRepository();
-  ValueNotifier<int> selectedItems = ValueNotifier<int>(-1);
+  SelectedPriceList? selectedPriceList;
 
   bool get isLoading => _isLoading;
   Thera? get thera => _thera;
@@ -19,10 +19,11 @@ class TheraVm with ChangeNotifier {
       notifyListeners();
 
       // Call the repository to fetch data
-      Thera theraData = await _repository.getData(unitId: unitId);
+      final response = await _repository.getData(unitId: unitId);
 
       // Set the fetched data to _thera
-      _thera = theraData;
+      _thera = response;
+      print("hasil: $_thera");
 
       // Set isLoading to false after fetching data
       _isLoading = false;
@@ -37,7 +38,14 @@ class TheraVm with ChangeNotifier {
     }
   }
 
-  void selectItem(int index) {
-    selectedItems.value = index;
+  void selectPriceList(int index) {
+    selectedPriceList = SelectedPriceList(
+      index: index,
+      meterNumber: thera?.meterNumber,
+      unitId: thera?.unitNumber,
+      amount: thera?.priceList?[index].amount,
+    );
+
+    notifyListeners();
   }
 }

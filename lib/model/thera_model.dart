@@ -146,7 +146,7 @@ class TheraDetail {
 class SelectedPriceList {
   int index;
   String? meterNumber;
-  int? unitId;
+  String? unitId;
   int? amount;
 
   SelectedPriceList({this.index = 0, this.meterNumber, this.unitId, this.amount});
@@ -162,19 +162,19 @@ class SelectedPriceList {
   }
 }
 
-var theraDummyData = Thera(
-  meterNumber: "1234567890",
-  unitNumber: "Unit-123",
-  priceList: [
-    PriceList(id: 1, amount: 100000, kwh: 66.56),
-    PriceList(id: 2, amount: 150000, kwh: 99.83),
-    PriceList(id: 3, amount: 200000, kwh: 133.11),
-    PriceList(id: 4, amount: 250000, kwh: 166.39),
-    PriceList(id: 5, amount: 300000, kwh: 199.67),
-  ],
-  transactionHistory: [
-    TransactionHistory(trxCode: 'TRX001', amount: 10000, paymentFee: 5000, kwh: 10.0, paymentDate: '2024-01-30 23:00'),
-    TransactionHistory(trxCode: 'TRX002', amount: 15000, paymentFee: 5000, kwh: 15.0, paymentDate: '2023-12-02 23:00'),
-    TransactionHistory(trxCode: 'TRX003', amount: 20000, paymentFee: 5000, kwh: 20.0, paymentDate: '2023-11-29 19:00'),
-  ]
-);
+// var theraDummyData = Thera(
+//   meterNumber: "1234567890",
+//   unitNumber: "Unit-123",
+//   priceList: [
+//     PriceList(id: 1, amount: 100000, kwh: 66.56),
+//     PriceList(id: 2, amount: 150000, kwh: 99.83),
+//     PriceList(id: 3, amount: 200000, kwh: 133.11),
+//     PriceList(id: 4, amount: 250000, kwh: 166.39),
+//     PriceList(id: 5, amount: 300000, kwh: 199.67),
+//   ],
+//   transactionHistory: [
+//     TransactionHistory(trxCode: 'TRX001', amount: 10000, paymentFee: 5000, kwh: 10.0, paymentDate: '2024-01-30 23:00'),
+//     TransactionHistory(trxCode: 'TRX002', amount: 15000, paymentFee: 5000, kwh: 15.0, paymentDate: '2023-12-02 23:00'),
+//     TransactionHistory(trxCode: 'TRX003', amount: 20000, paymentFee: 5000, kwh: 20.0, paymentDate: '2023-11-29 19:00'),
+//   ]
+// );
