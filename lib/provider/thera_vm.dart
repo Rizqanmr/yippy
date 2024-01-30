@@ -6,11 +6,13 @@ import '../repository/thera_repository.dart';
 class TheraVm with ChangeNotifier {
   bool _isLoading = true;
   Thera? _thera;
+  TheraDetail? _theraDetail;
   final TheraRepository _repository = TheraRepository();
   SelectedPriceList? selectedPriceList;
 
   bool get isLoading => _isLoading;
   Thera? get thera => _thera;
+  TheraDetail? get detail => _theraDetail;
 
   Future<void> getData({int unitId = 1}) async {
     try {
@@ -23,12 +25,28 @@ class TheraVm with ChangeNotifier {
 
       // Set the fetched data to _thera
       _thera = response;
-      print("hasil: $_thera");
 
       // Set isLoading to false after fetching data
       _isLoading = false;
 
       // Notify listeners about the change in data
+      notifyListeners();
+    } catch (e) {
+      // Handle errors
+      print('Error: $e');
+      _isLoading = false;
+      notifyListeners();
+    }
+  }
+
+  Future<void> getDetail(String trxCode) async {
+    try {
+      _isLoading = true;
+      notifyListeners();
+
+      final response = await _repository.getDetail(trxCode: trxCode);
+      _theraDetail = response;
+      _isLoading = false;
       notifyListeners();
     } catch (e) {
       // Handle errors

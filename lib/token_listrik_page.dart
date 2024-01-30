@@ -38,20 +38,8 @@ class _TokenListrikState extends State<TokenListrikPage> {
                 padding: const EdgeInsets.all(16),
                 child: Column(
                   children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        const Text("No. Meter"),
-                        Text(vm.thera!.meterNumber.toString())
-                      ],
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        const Text("Unit"),
-                        Text(vm.thera!.unitNumber.toString())
-                      ],
-                    )
+                    keyValue("No. Meter", vm.thera!.meterNumber.toString()),
+                    keyValue("Unit", vm.thera!.unitNumber.toString()),
                   ],
                 ),
               ),

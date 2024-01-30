@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import '../model/thera_model.dart';
+import '../thera_detail.dart';
 import '../utils/Utils.dart';
 
 class TheraHistory extends StatelessWidget {
@@ -29,7 +30,9 @@ class TheraHistory extends StatelessWidget {
                 style: const TextStyle(fontWeight: FontWeight.bold),
               ),
               onTap: () {
-                // Navigate.to(context, TheraDetailPage(trxCode: histories[i].trxCode!));
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return TheraDetailPage(trxCode: histories[i].trxCode!);
+                }));
               },
             );
           }),
