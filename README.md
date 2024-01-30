@@ -9,4 +9,5 @@ A new Flutter project. State Management using Provider
 ![Screenshot_20240131_013632](https://github.com/Rizqanmr/yippy/assets/45690865/2cec27c8-dbcc-4681-8180-2fff468b8b18)
 
 ## Detail Transaction
-![Screenshot_20240131_013638](https://github.com/Rizqanmr/yippy/assets/45690865/6c8f511b-d371-4207-b8ad-52f386183eaa)
+![Screenshot_20240131_015747](https://github.com/Rizqanmr/yippy/assets/45690865/b13243f3-daf9-45ca-bedb-e152a871f812)
+
